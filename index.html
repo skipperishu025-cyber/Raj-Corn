@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj-corn🌽🌽 </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="left-nav">
+            <h1 class="red">R</h1>
+            <h1 class="logo">aj🌽🌽</h1>
+        </div>
+
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="right-nav" id="navLinks">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSecVXL0PawKJkEhcduLVBeZA2DTdhcVf3erLLz1IOD6BWFdwg/viewform" target="_blank">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="body">
+        <!-- Sidebar (visible on desktop, hidden on mobile) -->
+        <div class="left-pannel">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSecVXL0PawKJkEhcduLVBeZA2DTdhcVf3erLLz1IOD6BWFdwg/viewform" target="_blank">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="right-main-pannel">
+            <div class="video-grid" id="videoGrid">
+                <!-- Video 1 -->
+                <div class="video-item active" data-video="asccet/video/raj1.mp4" data-poster="asccet/poster/raj1.png">
+                    <video controls poster="asccet/poster/raj1.png">
+                        <source src="asccet/video/raj1.mp4" type="video/mp4">
+                    </video>
+                    <p>Raj Caught In Public Place</p>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-item" data-video="asccet/video/raj2.mp4" data-poster="asccet/poster/raj2.png">
+                    <video controls poster="asccet/poster/raj2.png">
+                        <source src="asccet/video/raj2.mp4" type="video/mp4">
+                    </video>
+                    <p>Raj Dancing Like Crazy</p>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-item" data-video="asccet/video/raj3.mp4" data-poster="asccet/poster/raj3.png">
+                    <video controls poster="asccet/poster/raj3.png">
+                        <source src="asccet/video/raj3.mp4" type="video/mp4">
+                    </video>
+                    <p>Raj Eating 50 Corns Challenge</p>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="video-item" data-video="asccet/video/raj4.mp4" data-poster="asccet/poster/raj4.png">
+                    <video controls poster="asccet/poster/raj4.png">
+                        <source src="asccet/video/raj4.mp4" type="video/mp4">
+                    </video>
+                    <p>Raj vs Street Dog Epic Fight</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="text">
+            <h2>Raj-Corn</h2>
+            <h4>The Area With Full Of Amaze & Excitement</h4>
+        </div>
+        <div class="copyright">
+            <h3>© Produced By Your Fathers • 2025</h3>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        // Click video → make it big
+        document.querySelectorAll('.video-item').forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active from all
+                document.querySelectorAll('.video-item').forEach(i => i.classList.remove('active'));
+
+                // Add active to clicked
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
